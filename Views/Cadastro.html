@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device=width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/Cadastro_styles.css">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<title>Pesquisa</title>
+	<!--bota icone no Title-->
+    <link rel="icon" type="image/jpg" href="../img/icone.png">
+	<!--pra usar os icones-->
+	<script src="https://kit.fontawesome.com/fd2fcc4b4d.js" crossorigin="anonymous"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+	<script src="../jquery/jquery.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+
+</head>
+
+<body  id="bodi">
+
+  <div>
+
+		
+	<form class="form-horizontal col-md-8 offset-md-2" action="../Model/Pass_Cadastro.php" method="POST" id="Form-pp">
+		<hr>
+			<h3 class="col-md-auto mt-3 offset-4">Informações Pessoais</h3>
+		<hr>
+	  <fieldset>
+	  <!--Text input nome-->
+		<div class="form-group">
+
+  			<label class="col-md-auto mt-4" for="Nome">Nome<h11>*</h11></label>  
+  		  <div class="col-md-auto mt-2">
+  			<input id="Nome" name="Nome" placeholder="Digite seu Nome Completo" class="form-control input-md" required="" type="text">
+  		  </div>
+
+		</div>
+	  
+	  <!--Text input CPF, Data de Nascimento e sexo-->
+		<div class="form-group" id="CPFRGDT">
+
+  			<label class="col-md-2 mt-2" for="CPF">CPF <h11>*</h11></label>  
+  		  <div class="col-md-5 mt-2">
+  			<input id="CPF" name="CPF" placeholder="Ex: 000.000.000-00" class="form-control input-md" required="" type="text" >
+  		  </div>
+
+	  <!--Data de Nascimento-->
+  		  	<label class="col-md-auto mt-3" for="Data">Data de Nascimento <h11>*</h11></label> 
+  		  <div class="col-md-3">
+  			<input id="Data" name="Data" placeholder="Dia/Mês/Ano" class="form-control input-md" required="" type="text">
+  		  </div>
+
+	  <!--Sexo-->
+	  	<label class="col-md-2 mt-3" for="Sexo">Sexo <h11>*</h11></label>
+			<div class="col-md-2 form-inline">
+			  <div class="form-group ml-1"><label class="radio"><input type="radio" name="Sexo" value="Masculino"> Masculino</label></div>
+			  <div class="form-group ml-1"><label class="radio"><input type="radio" name="Sexo" value="Feminino"> Feminino</label></div>
+			</div>
+
+		</div>
+
+		<!--Cidade-->
+		<div class="form-group ">
+
+			<label class="col-md-2 mt-3" for="Cidade">Cidade <h11>*</h11></label>  
+  		  <div class="col-md-6">
+  			<input id="Cidade" name="Cidade" placeholder="Digite Nome da Cidade" class="form-control input-md" required="" type="text">
+  		  </div>
+
+		<!--Estado-->
+  		    <label class="col-md-2 mt-4" for="Estado">Estado <h11>*</h11></label>  
+  		<div class="col-md-4 ">
+  			 			  
+			  <select class="form-control" id="Estado" name="Estado" required=''>
+				<option>---</option>
+				<option value="AC">Acre</option>
+				<option value="AL">Alagoas</option>
+				<option value="AP">Amapá</option>
+				<option value="AM">Amazonas</option>
+				<option value="BA">Bahia</option>
+				<option value="CE">Ceará</option>
+				<option value="DF">Distrito Federal</option>
+				<option value="ES">Espírito Santo</option>
+				<option value="GO">Goiás</option>
+				<option value="MA">Maranhão</option>
+				<option value="MT">Mato Grosso</option>
+				<option value="MS">Mato Grosso do Sul</option>
+				<option value="MG">Minas Gerais</option>
+				<option value="PA">Pará</option>
+				<option value="PB">Paraíba</option>
+				<option value="PR">Paraná</option>
+				<option value="PE">Pernambuco</option>
+				<option value="PI">Piauí</option>
+				<option value="RJ">Rio de Janeiro</option>
+				<option value="RN">Rio Grande do Norte</option>
+				<option value="RS">Rio Grande do Sul</option>
+				<option value="RO">Rondônia</option>
+				<option value="RR">Roraima</option>
+				<option value="SC">Santa Catarina</option>
+				<option value="SP">São Paulo</option>
+				<option value="SE">Sergipe</option>
+				<option value="TO">Tocantins</option>
+			</select>
+		</div>
+
+		<br>
+		<hr>
+
+		<h3 class="col-md-auto mt-3 offset-4">Informações COVID-19</h1>
+
+		<hr>
+
+	  <!--Text input Tipo sanguineo-->
+	  	<div class="form-group">
+
+			<label class="col-md-auto mt-5" for="Sangue">Tipo Sanguíneo <h11>*</h11></label>
+			<div class="col-md-8 ">
+ 				<select class="form-control col-md-2" id="Sangue" name="Sangue" required=''>
+				<option>---</option>
+  				<option value="A+">A+</option>
+    			<option value="A-">A-</option>
+   				<option value="B+">B+</option>
+    			<option value="B-">B-</option>
+    			<option value="AB+">AB+</option>
+    			<option value="AB-">AB-</option>
+    			<option value="O+">O+</option>
+    			<option value="O-">O-</option>
+			 	</select>
+
+		</div>
+
+		<!--diagnostico do covid 19-->	
+            <label class="col-md-auto mt-4" for="Teste-covid">Realizou o diagnóstico Coronavírus (COVID-19)?</label>
+				<div class="col-md-2">
+            		<select class="form-control" id="Teste-covid" name="Teste-covid" required=''>
+						<option>---</option>
+              			<option value="Sim">Sim</option>
+               			<option value="Não">Não</option>
+            		</select>
+		   		</div>
+
+		<!--teste do covid 19-->
+			<label class="col-md-auto mt-4" for="Teste-realizado">Qual teste de diagnóstico foi realizado?</label>
+				<div class="col-md-auto">
+					<select class="form-control" id="Teste-realizado" name="Teste-realizado" required=''>
+						<option>---</option>
+						<option value="RT-PCR SWAB Nasofaringe">RT-PCR SWAB Nasofaringe</option>
+						<option value="RT-PCR Saliva">RT-PCR Saliva</option>
+						<option value="Antígeno">Antígeno</option>
+						<option value="Outros">Outros</option>
+					</select>
+				</div>
+
+		<!--veze que pegou o covid 19-->
+			<label class="col-md-auto mt-4" for="Vezes-covid">Quantas vezes contraiu o vírus(COVID-19)?</label>
+				<div class="col-md-2">
+            		<select class="form-control" id="Vezes-covid" name="Vezes-covid">
+						<option>---</option>
+              			<option value="1">1</option>
+               			<option value="2">2</option>
+						<option value="Mais de 2">Mais de 2</option>
+            		</select>
+		   		</div>
+
+		<!--sintoma apresentado-->
+            <label class="col-md-auto mt-4">Qual primeiro sintoma foi apresentado?<h11>*</h11></label>
+				<div class="col-md-auto">
+					<select class="form-control" id="Primeiro-sintoma" name="Primeiro-sintoma">
+						<option>---</option>
+              			<option value="Tosse">Tosse</option>
+               			<option value="Febre">Febre</option>
+						<option value="Coriza">Coriza</option>
+						<option value="Dor de Garganta">Dor de Garganta</option>
+						<option value="Dificuldade de respirar">Dificuldade de respirar</option>
+						<option value="Perda de Olfato(anosmia) e Paladar(ageusia)">Perda de Olfato(anosmia) e Paladar(ageusia)</option>
+						<option value="Distúrbios gastrintestinais (náuseas/vômitos/diarreia)">Distúrbios gastrintestinais (náuseas/vômitos/diarreia)</option>
+						<option value="Cansaço(astenia)">Cansaço(astenia)</option>
+						<option value="Diminuição do apetite (hiporexia) e Dispnéia ( falta de ar)">Diminuição do apetite (hiporexia) e Dispnéia ( falta de ar)</option>
+            		</select>
+				</div>
+            
+		<!--vacina-->
+            <label class="col-md-auto mt-4" for="Vacina">Voce foi Vacinado?</label>
+			<div class="col-md-2">
+            	<select class="form-control" name="Vacina" id="Vacina" required=''>
+					<option>---</option>
+                	<option value="Sim">Sim</option>
+                	<option value="Não">Não</option>
+            	</select>
+			</div>
+
+		<!--qual vacina tomou-->
+			<label class="col-md-auto mt-4" for="Qualvacina">Qual vacina você Tomou?</label>
+			<div class="col-md-auto">
+            	<select class="form-control" name="Qualvacina" id="Qualvacina" required=''>
+					<option>---</option>
+                	<option value="CoronaVac">CoronaVac</option>
+                	<option value="Oxford">Oxford</option>
+					<option value="Pfizer">Pfizer</option>
+					<option value="Moderna">Moderna</option>
+					<option value="Sputinik V">Sputinik V</option>
+					<option value="Não Tomei Vacina">Não Tomei Vacina</option>
+            	</select>
+			</div>
+
+		<!--contraiu o virus depois da vacina-->
+			<label class="col-md-auto mt-4" for="Contraiuvirus">Contraiu o vírus antes ou depois de tomar a vacina?</label>
+			<div class="col-md-2">
+            	<select class="form-control" name="Contraiuvirus" id="Contraiuvirus">
+					<option>---</option>
+                	<option value="Antes">Antes</option>
+                	<option value="Depois">Depois</option>
+            	</select>
+			</div>
+
+		<!--doenças-->
+			<label class="col-md-auto mt-4">Você possui alguma dessas doenças abaixo?<h11>se sim escolha uma*</h11></label>
+				<div class="col-md-auto">
+					<select class="form-control" name="Doenca" id="Doenca">
+						<option>---</option>
+						<option value="Diabete">Diabete</option>
+						<option value="Hipertensão">Hipertensão</option>
+						<option value="Doenças renais">Doenças renais</option>
+						<option value="Doenças respiratória">Doenças respiratória</option>
+						<option value="Doenças cardiovasculares">Doenças cardiovasculares</option>
+						<option value="Não possuo doenças">Não possuo doenças</option>
+					</select>
+				</div>
+
+		<!--voce fuma ou bebe?-->
+				<label class="col-md-auto mt-4" for="Fumabebe">Você fuma ou bebe alguma bebida alcoólica?</label>
+				<div class="col-md-2">
+					<select class="form-control" name="Fumabebe" id="Fumabebe">
+						<option>---</option>
+						<option value="Sim">Sim</option>
+						<option value="Não">Não</option>
+					</select>
+				</div>
+
+		</div>
+       <!--botao voltar e enviar pesquisa-->
+       		<div class="form-group row">
+
+				<div class="col-md-auto mt-3 offset-9" id="botao">
+					<a class="btn btn-danger" type="Reset" href="index.html">Cancelar</a>
+					<button id="Cadastrar"name="Cadastrar" class="btn btn-primary" type="Submit" >Enviar Pesquisa!</button>
+	  			</div>
+
+			</div>
+	  </fieldset>
+ 	</form>
+</div>
+	<!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Search Coronavírus 2021. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="https://github.com/Erivelton-Batista/Search-Coronavirus.git">
+                <i class="fab fa-github fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="login.html">
+                <i class="fas fa-user fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+	  <!-- Logout Modal-->
+	  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+	  aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			  <div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+				  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">×</span>
+				  </button>
+			  </div>
+			  <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+			  <div class="modal-footer">
+				  <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+				  <a class="btn btn-primary" href="login.html">Logout</a>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+
+		<!--Js de mascara-->
+		<script>
+			$(document).ready(function(){
+    			$("#CPF").mask('000.000.000-00');
+
+				$("#Data").mask('00/00/0000');
+
+    			$('#estado').mask('AA');
+			});
+
+				$('#Nome').on('keyup', (ev) => {
+					$('#Nome').val($('#Nome').val().toUpperCase());
+				});
+
+				$('#Cidade').on('keyup', (ev) => {
+					$('#Cidade').val($('#Cidade').val().toUpperCase());
+				});
+
+		</script>
+
+
+</body>
+
+	
+</html>
